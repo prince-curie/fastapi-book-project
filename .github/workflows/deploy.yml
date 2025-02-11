@@ -23,7 +23,7 @@ jobs:
                 key: ${{ secrets.EC2_PRIVATE_KEY }}
                 port: ${{ secrets.EC2_PORT }}
                 scripts: |
-                  sudo su
+                  sudo su ${{ secrets.EC2_USERNAME }}
                   cd /home/deploy/fastapi-book-project
                   git pull origin main
                   python -m venv venv
