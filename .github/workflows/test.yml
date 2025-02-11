@@ -1,6 +1,9 @@
 name: Test Fastapi Book Project
 
-on: [push]
+on:
+    pull_request:
+        branches:
+            - main
 
 jobs: 
     test:
@@ -13,7 +16,7 @@ jobs:
             - name: Set up Python 3.12
               uses: actions/setup-python@v4
               with:
-                python-version: '3.12.3'
+                python-version: '3.12'
 
             - name: Install dependencies
               run: |
