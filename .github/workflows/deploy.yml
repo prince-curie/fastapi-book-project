@@ -10,13 +10,10 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v3
 
-            - name: Set up Python 3.12
-              uses: actions/setup-python@v4
-              with:
-                python-version: 3.12.3
-
-            # - name: Install dependencies
-            #   run: pip3 install -r requirements.txt
+            # - name: Set up Python 3.12
+            #   uses: actions/setup-python@v4
+            #   with:
+            #     python-version: 3.12.3
 
             - name: Deploy
               uses: appleboy/ssh-action@master
@@ -25,7 +22,6 @@ jobs:
               with:
                 host: ${{ secrets.EC2_HOST }}
                 username: ${{ secrets.EC2_USERNAME }}
-                # password: ${{ secrets.EC2_PASSWORD }}
                 key: ${{ secrets.EC2_PRIVATE_KEY }}
                 port: ${{ secrets.EC2_PORT }}
                 envs: EC2_USER_PASSWORD
