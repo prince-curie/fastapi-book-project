@@ -81,6 +81,9 @@ uvicorn main:app
 
 ## API Endpoints
 
+### Base URL
+- [http://ec2-18-232-125-167.compute-1.amazonaws.com/](http://ec2-18-232-125-167.compute-1.amazonaws.com/) 
+
 ### Books
 
 - `GET /api/v1/books/` - Get all books
@@ -128,6 +131,9 @@ The API includes proper error handling for:
 - Invalid book IDs
 - Invalid genre types
 - Malformed requests
+
+## Deployment
+To deploy new changes merge the changes to the main branch. Once merged the deployment will take place automatically and the main branch will update whatever is in the production environment.
 
 ## Contributing
 
