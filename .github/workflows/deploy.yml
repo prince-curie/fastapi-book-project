@@ -22,11 +22,10 @@ jobs:
                 username: ${{ secrets.EC2_USERNAME }}
                 key: ${{ secrets.EC2_PRIVATE_KEY }}
                 port: ${{ secrets.EC2_PORT }}
+                script_path: /home/deploy/fastapi-book-project
                 script: |
-                  sudo su deploy
-                  cd /home/deploy/fastapi-book-project
                   git pull origin main
-                  python -m venv venv
+                  python3 -m venv venv
                   source venv/bin/activate
                   pip3 install -r requirements.txt
                   sudo systemctl status fastapi-book-project.service
