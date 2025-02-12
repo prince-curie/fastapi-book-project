@@ -43,6 +43,8 @@ fastapi-book-project/
 - Pydantic
 - pytest
 - uvicorn
+- aws
+- nginx
 
 ## Installation
 
