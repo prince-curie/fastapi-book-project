@@ -29,5 +29,5 @@ jobs:
                   python3 -m venv venv
                   source venv/bin/activate
                   pip3 install -r requirements.txt
-                  sudo -S <<< $EC2_USER_PASSWORD systemctl start fastapi-book-project.service
+                  sudo -S <<< $EC2_USER_PASSWORD systemctl restart fastapi-book-project.service
                   sudo -S <<< $EC2_USER_PASSWORD systemctl status fastapi-book-project.service
